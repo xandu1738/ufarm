@@ -6,6 +6,7 @@ class FarmerOneForm(forms.ModelForm):
         model = FarmerOne
         fields = "__all__"
         
+        
 class UrbanFarmerForm(forms.ModelForm):
     class Meta:
         model = UrbanFarmer

@@ -33,3 +33,6 @@ def add_activity(request):
             return redirect('add_activity')
     context = {'form': form}
     return render(request, 'farmers/add_activity.html', context)
+
+def dashboard(request):
+    return render(request, 'dashboard.html')

@@ -6,4 +6,23 @@
     {{form.as_p}}
     <button type="submit" class="btn btn-success">Success</button>
 </form>
+{% endblock content %}{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form method="POST" action="">
+    {% csrf_token %}
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="card bg-light mb-3">
+              <div class="card-header text-align" style="background-color:green;">Urban Farmer</div>
+              <div class="card-body">
+                {% comment %} <h5 class="card-title">Card Title</h5> {% endcomment %}
+                {{form|crispy}}
+                <button type="submit" class="btn btn-success">Success</button>              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</form>
 {% endblock content %}
